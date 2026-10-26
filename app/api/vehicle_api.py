@@ -2,12 +2,12 @@ from ..models.vehicle import Vehicle
 from sqlalchemy.ext.asyncio import AsyncSession
 from ..services.vehicle_service import VehicleService
 from ..services.telemetry_service import TelemetryService
-from ..schemas.vehicle import VehicleCreateRequest,VehicleResponse,VehicleStateResponse,AlertListResponse,VehicleDeviceRegister,VehicleDeviceResponse
+from ..schemas.vehicle import VehicleCreateRequest,VehicleResponse,VehicleStateResponse,AlertListResponse,VehicleDeviceRegister,VehicleDeviceCreatedResponse
 from ..schemas.telemetry import TelemetryListResponse
 from fastapi import Depends,APIRouter, Query
 from ..core.database import get_session
 from ..exceptions.organizations_exception import OrganizationDoesNotExist
-from ..exceptions.vehicle_exception import VehicleDoesNotExist,CurrentStateNotFound,NoAlertsFound
+from ..exceptions.vehicle_exception import ActiveDeviceAlreadyExists, NoActiveDeviceToReplace, VehicleDoesNotExist,CurrentStateNotFound,NoAlertsFound
 from fastapi import HTTPException,status
 from uuid import UUID
 from ..dependencies.auth_dependencies import RoleChecker
@@ -91,16 +91,69 @@ async def get_vehicle_alerts(
 
 
 
-@vehicle_router.post("/vehicles/{vehicle_id}/devices",response_model=VehicleDeviceResponse)
+@vehicle_router.post("/vehicles/{vehicle_id}/devices",response_model=VehicleDeviceCreatedResponse)
 async def register_device(data:VehicleDeviceRegister,vehicle_id:UUID,session:AsyncSession=Depends(get_session)):
   try:
-    device= await vehicle_service.device_register(data,vehicle_id,session)
-    return device
+    device,device_key= await vehicle_service.device_register(data,vehicle_id,session)
+    return VehicleDeviceCreatedResponse(
+            device_id=device.device_id,
+            vehicle_id=device.vehicle_id,
+            device_name=device.device_name,
+            device_key=device_key,
+            is_active=device.is_active,
+            created_at=device.created_at,
+       
+    )
 
   except VehicleDoesNotExist:
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="Vehicle Nott found")
 
+  except ActiveDeviceAlreadyExists:
+      raise HTTPException(
+          status_code=status.HTTP_409_CONFLICT,
+          detail=(
+              "This vehicle already has an active device. "
+              "Use the device replacement API instead."
+          ),
+      )
 
+
+@vehicle_router.post(
+    "/vehicles/{vehicle_id}/devices/replace",
+    response_model=VehicleDeviceCreatedResponse,
+)
+async def replace_device(
+    data: VehicleDeviceRegister,
+    vehicle_id: UUID,
+    session: AsyncSession = Depends(get_session),
+):
+    try:
+        device, device_key = await vehicle_service.replace_device(
+            data,
+            vehicle_id,
+            session,
+        )
+
+        return VehicleDeviceCreatedResponse(
+            device_id=device.device_id,
+            vehicle_id=device.vehicle_id,
+            device_name=device.device_name,
+            device_key=device_key,
+            is_active=device.is_active,
+            created_at=device.created_at,
+        )
+
+    except VehicleDoesNotExist:
+        raise HTTPException(
+            status_code=404,
+            detail="Vehicle not found",
+        )
+
+    except NoActiveDeviceToReplace:
+        raise HTTPException(
+            status_code=409,
+            detail="No active device exists to replace. Register a new device instead.",
+        )
   
 
 

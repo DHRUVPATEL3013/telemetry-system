@@ -5,7 +5,7 @@ from ..repositories.organization import is_organization_already_exist
 from ..exceptions.organizations_exception import OrganizationDoesNotExist
 from ..exceptions.vehicle_exception import VehicleDoesNotExist,CurrentStateNotFound,NoAlertsFound
 from uuid import UUID
-from ..repositories.vehicle import get_vehicle_for_organization
+from ..repositories.vehicle import get_vehicle_for_organization,replace_existing_device
 from ..utils.device_keys import hash_device_key,generate_device_key
 
 
@@ -13,7 +13,7 @@ from ..utils.device_keys import hash_device_key,generate_device_key
 class VehicleService:
 
   async def create_vehicle(self,data:VehicleCreateRequest,organization_id:UUID
-,session:AsyncSession):
+    ,session:AsyncSession):
 
     if await is_organization_already_exist(session=session,organization_id=organization_id):
       return await insert_vehicle(data,organization_id,session)
@@ -64,14 +64,31 @@ class VehicleService:
 
   async def device_register(self,data:VehicleDeviceRegister,vehicle_id:UUID,session:AsyncSession):
     if await vehicle_get(vehicle_id,session) is None:
-      print("hhh")
       raise VehicleDoesNotExist()
-    print("huhu")
     device_key=generate_device_key()
     hash_key=hash_device_key(device_key)
 
     device = await register_new_device(data,vehicle_id,hash_key,session)
-    return device
+    return device,device_key
+
+
+  async def replace_device(
+    self,
+    data: VehicleDeviceRegister,
+    vehicle_id: UUID,
+    session: AsyncSession,
+):
+    device_key = generate_device_key()
+    key_hash = hash_device_key(device_key)
+
+    device = await replace_existing_device(
+        data=data,
+        vehicle_id=vehicle_id,
+        key_hash=key_hash,
+        session=session,
+    )
+
+    return device, device_key
 
     
   

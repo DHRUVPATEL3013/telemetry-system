@@ -46,10 +46,11 @@ class AlertListResponse(BaseModel):
 class VehicleDeviceRegister(BaseModel):
      device_name:str
 
-class VehicleDeviceResponse(BaseModel):
+class VehicleDeviceCreatedResponse(BaseModel):
      device_id:UUID
      vehicle_id:UUID
      device_name:str
+     device_key:str
      is_active:bool
      created_at:datetime
 
