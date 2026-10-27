@@ -16,9 +16,9 @@ from app.models import (
 
 app=FastAPI()
 
-app.include_router(auth_router,tags=["Auth"])
-app.include_router(organization_router,tags=["Organization"])
-app.include_router(user_router,tags=["User"])
-app.include_router(vehicle_router,tags=["Vehicle"])
-app.include_router(telemetry_router,tags=["Telemetry"])
+app.include_router(auth_router,prefix="/auth",tags=["Auth"])
+app.include_router(organization_router,prefix="/organizations",tags=["Organization"])
+app.include_router(user_router,prefix="/users",tags=["User"])
+app.include_router(vehicle_router,prefix="/vehicles",tags=["Vehicle"])
+app.include_router(telemetry_router,prefix="/telemetries",tags=["Telemetry"])
 

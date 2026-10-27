@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from uuid import UUID
 from datetime import datetime
 
@@ -26,6 +26,9 @@ class VehicleStateResponse(BaseModel):
     longitude: float
     last_event_timestamp: datetime
     updated_at: datetime
+
+
+
 
 
 class AlertItemResponse(BaseModel):

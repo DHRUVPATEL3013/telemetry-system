@@ -31,6 +31,14 @@ async def vehicle_get(vehicle_id:UUID,session:AsyncSession):
   vehicle=result.scalar_one_or_none()
   return vehicle
 
+async def vehicle_already_exist_with_registration_number(registration_num:str,session:AsyncSession):
+  statement=select(Vehicle).where(Vehicle.registration_number==registration_num)
+  result=await session.execute(statement)
+  vehicle=result.scalar_one_or_none()
+  return vehicle
+
+
+
 async def vehicle_state_get(vehicle_id:UUID,session:AsyncSession):
   statement=select(VehicleState).where(VehicleState.vehicle_id==vehicle_id)
   result=await session.execute(statement)

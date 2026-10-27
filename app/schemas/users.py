@@ -9,7 +9,7 @@ class CreateUserRequest(BaseModel):
     email: EmailStr
     password: str
     confirm_password :str
-    role: str = "user"
+    role: str = "fleet-manager"
 
     @field_validator("password")
     @classmethod

@@ -1,0 +1,182 @@
+[
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "f96e7c09-bb8a-4fa5-8998-620cdec3dc48",
+    "device_id": "803e756e-ea54-43b0-8f1c-fb5ddf3e2216",
+    "device_key": "Y_qr6Oirmk6VGBHmBsTt3twLoQu0RQUKDlXOLbX6a5U"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "a4a10a99-fb60-4a50-8a16-8b04659b5b3f",
+    "device_id": "4acb4c07-1242-4948-a9ea-8a42003c60f7",
+    "device_key": "MPuHIDS9_ErMV2s0ZyhgVk_rOLLKCgNsIjgUfjiWQiw"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "9bd47050-fca5-4c70-8571-f7eeb0fd67e6",
+    "device_id": "9d3e5553-6a34-4404-b609-f60467e5fe50",
+    "device_key": "i5uO5ftX-G6weSwGGOSBcnbrKO6n3IMquFfoE-roX_I"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "7149aa7f-2fd4-4acc-b9bd-4ca2e8bf8ed4",
+    "device_id": "2372e945-7ebb-4857-a0f8-f146cbf4d266",
+    "device_key": "wFrlCPNUi5mj_Uiw8PAn8ZX1zCBgyRtSO75SFTrZKYY"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "25c453f5-97a9-430b-a25c-b7335bd42d49",
+    "device_id": "fe2064e8-6274-4b23-bff8-538c6da4b29a",
+    "device_key": "GkQ3hAlvvzC1-eWiLuPmgcqlSg9jzShL0v5cGpIw8yk"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "45314bf3-9285-46dc-8387-7c721e640707",
+    "device_id": "6bfd8bbc-160e-4506-ae65-93368aef8927",
+    "device_key": "Gut9TDPp0xeenmXAo1QpqDj4df0Ad1fVs4kiaWp7rsc"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "26f530dd-69d6-452d-8c29-539f6c414929",
+    "device_id": "f0424a3c-ccbf-4362-b17c-4b8ec1a2428e",
+    "device_key": "kW3JM9g1X_qwQQPOjEIlHamS6nDBAgi0yS4FMWht_3o"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "7911a89c-85bd-4ab9-8d2f-ed4c4bdf86c2",
+    "device_id": "a5d6bc94-035d-4f5a-a313-8883b29c53f2",
+    "device_key": "FsqZ0Mz0mHODbi8YgStt7ikB0POXqoSkElm56ckgSJk"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "fc62593d-432e-48fb-8b43-baf2e47e865f",
+    "device_id": "80d7e0da-0f0c-448b-90ec-6eea61398782",
+    "device_key": "MFoLQN31Tj65BKNDrwHkgrAVHV_7UZkQVixHvcxEhag"
+  },
+  {
+    "organization_id": "613db749-d67b-4b44-aa56-e3770a13325a",
+    "vehicle_id": "d4e6b597-1cb1-410b-b401-089ed11ab4f7",
+    "device_id": "55b2e061-c41f-48c3-bae3-8d38cdf38cb2",
+    "device_key": "5taHG9ugtQAXeSHaaKsuR67NB0Ah4rDA-HuWuaVKB_4"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "2309be16-27da-43ef-a322-a850e5b181a6",
+    "device_id": "402dc15f-006b-4041-a508-3d33f0a286d1",
+    "device_key": "bcpwH3biHXARge5gpnEqQgxH-Lz3mI-R6wSrCJBtW5Y"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "ec6067cd-8141-4569-a540-1b29d761bf66",
+    "device_id": "42ffd28f-0a5a-474d-bcfd-6e3cec912b53",
+    "device_key": "-LDjJj9TTmdMtX2EHcwmm7Gxpp-6REooxlQ1ahDtoaY"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "f4fca2ec-d1e4-4c05-b2fa-de66b5276942",
+    "device_id": "767aca46-13b3-4505-8478-6946ac4f492b",
+    "device_key": "OBzKm2ihJTDXxvCP6Vrcu-JNGNkrk8rgc8x-wpluyY0"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "e1ecaf36-8c64-4528-a46b-c0e45cb062af",
+    "device_id": "3338b35e-9e03-4968-a576-43a13f48b8e6",
+    "device_key": "TPZUN5ZGlgiQ0eUidx8Fal--C-Z_MxjsrsBzEFJXioQ"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "51d40b41-2260-455f-a6cb-3cd3bce0aa32",
+    "device_id": "b9ed47f0-c038-4495-a5b9-18fa431e76e6",
+    "device_key": "nQtA0h3i3YRpUL_WHxTot27zkvS-_lkaksU08xNgqA8"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "36ca0a71-354e-4dba-b258-1aa6c4c85f38",
+    "device_id": "f104ea5a-15ff-4881-9299-e145496eee1b",
+    "device_key": "Dn7UZS0wmJpelMqvtZWhSxAziPxtAoEa5Uypi1Unsjw"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "d0ae9dff-77a2-4278-9692-310b913f0e1a",
+    "device_id": "9fb74f6f-505d-4460-8582-ac163a75b609",
+    "device_key": "23orW7bsuB0fhrF8uUc10b4ZggiRHPXZgT8Jp38W37g"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "4b84e359-b74f-430c-8c67-89d319b5ea4c",
+    "device_id": "8e5ef19b-1967-4fad-a312-be5b58d72e0c",
+    "device_key": "omMZJjshTgfHG5i6rXyZyVrlgWzKf5x1FZ79PY4Ge7c"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "fd6721fa-d247-46f1-8d71-ae52a29f746c",
+    "device_id": "e4ec833b-224e-472e-bcb9-c24ebad88c68",
+    "device_key": "UIWnL7h7aDxAiga1WO1_vHDuo9PpbPbalGi4PetGx4c"
+  },
+  {
+    "organization_id": "878029f0-ce63-46c4-ab9f-54bf29f103ec",
+    "vehicle_id": "5fb02035-b874-4020-8187-95ba1009e9a7",
+    "device_id": "520f37c9-a8b7-4706-aa8e-d56fc851815b",
+    "device_key": "AnHN3ATAGkPp7mnT5RIYbvVssNBw-6UZrsFB9tkfT1E"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "ac82c7eb-811a-45e3-9fab-42b5aa1255ec",
+    "device_id": "778e5aa3-09e9-4ddd-98c8-48f5fc9465cb",
+    "device_key": "IPArYaUpaMkB0tlqZqBcdNfVggWhuqtvYG1qQQT0Bb4"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "32444e8a-7f52-49a2-a01b-ce588fca3de8",
+    "device_id": "d5b28767-0bd4-4787-be6e-15dd2f619d4f",
+    "device_key": "qjEbEqD5U4jaUnHtk9O4lkoytCTKyw_1rDoZXzHO2PQ"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "cafdacf6-d12e-4ae2-a713-3d1c5fdd26c3",
+    "device_id": "0bb4ab51-d8c0-405a-a576-385880ee648a",
+    "device_key": "xSjKwAVoHdwLy2Vp14AQ2USgBaFOJy_57u7eiw90S5g"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "b3a243b9-cc8d-40a5-a8ee-7600b9d46532",
+    "device_id": "4c188f21-edaa-46bf-9634-b90b8a33405c",
+    "device_key": "6GWURZ7iRXjsazPda6tTU2aB1OAEhmuONepaF-T8nU4"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "1d851d97-c7da-4028-b045-341ed4e00a6e",
+    "device_id": "558b5feb-1aae-4994-966d-d3a4ad380ac0",
+    "device_key": "oIEXtAzshsURsFHW5dtTPBVtv5yg_oVv_nJgFpHHRZs"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "d49191dc-ece0-4f1e-a80e-135fc40b3626",
+    "device_id": "2fb6bef3-eb91-4b12-89a7-97cf27be8436",
+    "device_key": "89kPI0sYG1JaDQx3c5xq6oTc1b0eKneTf1JOvKFVv70"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "c55ffefa-01f6-4810-aed7-b5f3474a84ef",
+    "device_id": "43462a40-c242-4983-8348-f0537ae63317",
+    "device_key": "6zA0mrtWJeK3S975LaGrK4ngBuQ3N8-STCiZ7zcgIgM"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "d2086d08-f09f-458b-9d07-dc39903c34be",
+    "device_id": "8a4d8719-0321-447e-b013-a594c8fb9dd1",
+    "device_key": "rjqHjR3SSH7xJfiyeMZRBOBw0Nx19yhZ1caa4r6XJTQ"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "e412019e-98c0-4b23-8432-0468b7caeb4e",
+    "device_id": "6f6a5da4-6210-485b-8069-246091246e0e",
+    "device_key": "EjP7FzuQa3aUgowgOyEuUYrMke7XWajoxZxSlrlE7Vs"
+  },
+  {
+    "organization_id": "4057319b-5416-4cb0-952f-e28e40fb071c",
+    "vehicle_id": "2b30857f-f449-4fb5-aad7-16e7022d3e23",
+    "device_id": "162dfd40-480e-4cb0-9a38-29ec5e4d7dda",
+    "device_key": "ZwMDbbmE1_v3wmgGyo2cd2ih7cZV-7rL2tuDqCwXHTQ"
+  }
+]

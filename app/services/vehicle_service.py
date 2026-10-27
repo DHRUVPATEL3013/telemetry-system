@@ -1,9 +1,9 @@
 from ..schemas.vehicle import VehicleCreateRequest,VehicleDeviceRegister
 from sqlalchemy.ext.asyncio import AsyncSession
-from ..repositories.vehicle import insert_vehicle,vehicle_get,vehicle_state_get,vehicle_alert_get,register_new_device
+from ..repositories.vehicle import insert_vehicle,vehicle_get,vehicle_state_get,vehicle_alert_get,register_new_device,vehicle_already_exist_with_registration_number
 from ..repositories.organization import is_organization_already_exist
 from ..exceptions.organizations_exception import OrganizationDoesNotExist
-from ..exceptions.vehicle_exception import VehicleDoesNotExist,CurrentStateNotFound,NoAlertsFound
+from ..exceptions.vehicle_exception import CurrentStateNotFound, VehicleDoesNotExist,VehicleAlreadyExist
 from uuid import UUID
 from ..repositories.vehicle import get_vehicle_for_organization,replace_existing_device
 from ..utils.device_keys import hash_device_key,generate_device_key
@@ -15,9 +15,13 @@ class VehicleService:
   async def create_vehicle(self,data:VehicleCreateRequest,organization_id:UUID
     ,session:AsyncSession):
 
-    if await is_organization_already_exist(session=session,organization_id=organization_id):
-      return await insert_vehicle(data,organization_id,session)
-    raise OrganizationDoesNotExist()
+    if await vehicle_already_exist_with_registration_number(data.registration_number,session):
+          raise VehicleAlreadyExist()
+    if not await is_organization_already_exist(session=session,organization_id=organization_id):
+          raise OrganizationDoesNotExist()
+    return await insert_vehicle(data,organization_id,session)
+    
+
 
 
   async def get_vehicle(self,vehicle_id:UUID,organization_id:UUID,session:AsyncSession):
@@ -51,7 +55,7 @@ class VehicleService:
       raise VehicleDoesNotExist()
     alerts,has_more = await vehicle_alert_get(vehicle_id,limit,offset,session)
     if not alerts:
-      raise NoAlertsFound()
+      alerts=[]
     return {
       "vehicle_id":vehicle_id,
       "items": alerts,
